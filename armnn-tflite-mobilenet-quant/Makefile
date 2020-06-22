@@ -19,6 +19,6 @@ clean:
 	-rm -f mobilenetv1_quant_tflite
 
 test:
-	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/pi/armnn_test/armnn-dst/armnn/lib ./mobilenetv1_quant_tflite -m ./model/mobilenet_v1_1.0_224_quant.tflite -d ./data/dog.jpg -p ./model/labels_mobilenet_quant_v1_224.txt -c CpuAcc
+	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/pi/armnn_test/armnn-dist/armnn/lib ./mobilenetv1_quant_tflite -m ./model/mobilenet_v1_1.0_224_quant.tflite -d ./data/dog.jpg -p ./model/labels_mobilenet_quant_v1_224.txt -c CpuAcc
 #test:
 #	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/pi/armnn-pi2/armnn/build ./mobilenetv1_quant_tflite -m ./model/mobilenet_v1_0.25_128_quant.tflite -d ./data/dog.jpg -p ./model/labels_mobilenet_quant_v1_224.txt -c CpuAcc
